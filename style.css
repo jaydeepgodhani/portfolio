@@ -1,0 +1,295 @@
+/* @font-face {
+  font-family: normalNoto;
+  src: url(./fonts/notosans-regular-webfont.woff2);
+} */
+
+html {
+  block-size: 100%;
+  color-scheme: light
+}
+
+@font-face {
+  font-family: extraboldRecoleta;
+  src: url(./fonts/Recoleta-Bold.woff2);
+}
+@font-face {
+  font-family: writerNormal;
+  src: url(./fonts/iAWriterQuattroV.ttf);
+}
+
+* {
+  cursor: none;
+  box-sizing: border-box;
+}
+
+button, :hover {
+  cursor: none;
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --font-primary-color: #000000;
+  --font-secondary-color: #4a4545;
+  --hr-dark: rgb(0, 0, 0, 0);
+  --hr-light: rgba(0, 0, 0, 0.75);
+  --link-color: rgb(255, 215, 0);
+}
+
+[data-theme="dark"] {
+  --bg-color: #0e2e3b;
+  --font-primary-color: #d8d7c3;
+  --font-secondary-color: #a6a6a6;
+  --hr-dark: rgba(255,255,255,0);
+  --hr-light: rgba(255, 255, 255, 0.75);
+  --link-color: #9100f8;
+}
+
+.bold-font {
+  font-family: extraboldRecoleta;
+  font-weight: 600;
+  font-size: xx-large;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.semibold-font {
+  font-family: extraboldRecoleta;
+  font-weight: 600;
+  font-size: x-large;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.lightnormal-font {
+  font-family: writerNormal;
+  font-size: medium;
+  color: var(--font-secondary-color);
+}
+
+.nav {
+  padding: 30px 15px;
+  font-size: larger;
+  position: sticky;
+  top: 0px;
+  backdrop-filter: blur(7px) opacity(0.95);
+  overflow: overlay;
+  margin: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  width: 750px;
+  font-weight: bold;
+}
+
+.centered {
+  width: 750px;
+  overflow-wrap: break-word;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-primary-color);
+  position: relative;
+  font-family: writerNormal;
+  height: 100%;
+  margin: 0%;
+  scroll-behavior: smooth;
+  transition: background-color 1s;
+}
+
+.invertedcursor {
+  position: fixed;
+  width: 1.3em;
+  height: 1.3em;
+  display: block;
+  background: #ffffff;
+  border-radius: 50%;
+  top: var(--y, -0.5em);
+  left: var(--x, -0.5em);
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  pointer-events: none;
+  transition: transform .2s;
+  mix-blend-mode: difference;
+}
+
+svg {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.padding-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+a, a:link, a:visited {
+  color: var(--font-primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a.ngc, a.ngc:link, a.ngc:visited {
+  color: var(--font-primary-color);
+  text-decoration: none;
+  background-position-y: -0%;
+  background-image: linear-gradient( transparent 50%, var(--link-color) 50%);
+  transition: background 500ms ease;
+  background-size: 2px;
+  background-size: auto 175%;
+}
+
+a.ngc:hover {
+  background-position-y: 100%;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, var(--hr-dark), var(--hr-light), var(--hr-dark));
+  /* background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc); */
+}
+
+#theme-toggle {
+  margin: 0 0 0 10px;
+}
+
+.right-aligned{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+@import"https://unpkg.com/open-props/easings.min.css";
+
+.sun-and-moon>:is(.moon, .sun, .sun-beams) {
+  transform-origin: center center
+}
+
+.sun-and-moon>:is(.moon, .sun) {
+  fill: var(--icon-fill)
+}
+
+.theme-toggle:is(:hover, :focus-visible)>.sun-and-moon>:is(.moon, .sun) {
+  fill: var(--icon-fill-hover)
+}
+
+.sun-and-moon>.sun-beams {
+  stroke: var(--icon-fill);
+  stroke-width: 2px
+}
+
+.theme-toggle:is(:hover, :focus-visible) .sun-and-moon>.sun-beams {
+  stroke: var(--icon-fill-hover)
+}
+
+[data-theme=dark] .sun-and-moon>.sun {
+  transform: scale(1.75)
+}
+
+[data-theme=dark] .sun-and-moon>.sun-beams {
+  opacity: 0
+}
+
+[data-theme=dark] .sun-and-moon>.moon>circle {
+  transform: translate(-7px)
+}
+
+@supports (cx: 1) {
+  [data-theme=dark] .sun-and-moon>.moon>circle {
+    transform: translate(0);
+    cx: 17
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sun-and-moon>.sun {
+    transition: transform .5s var(--ease-elastic-3)
+  }
+
+  .sun-and-moon>.sun-beams {
+    transition: transform .5s var(--ease-elastic-4), opacity .5s var(--ease-3)
+  }
+
+  .sun-and-moon .moon>circle {
+    transition: transform .25s var(--ease-out-5)
+  }
+
+  @supports (cx: 1) {
+    .sun-and-moon .moon>circle {
+      transition: cx .25s var(--ease-out-5)
+    }
+  }
+
+  [data-theme=dark] .sun-and-moon>.sun {
+    transform: scale(1.75);
+    transition-timing-function: var(--ease-3);
+    transition-duration: .25s
+  }
+
+  [data-theme=dark] .sun-and-moon>.sun-beams {
+    transform: rotate(-25deg);
+    transition-duration: .15s
+  }
+
+  [data-theme=dark] .sun-and-moon>.moon>circle {
+    transition-delay: .25s;
+    transition-duration: .5s
+  }
+}
+
+.theme-toggle {
+  --size: 1.6rem;
+  --icon-fill: hsl(210 10% 15%);
+  --icon-fill-hover: hsl(180, 5%, 4%);
+  background: none;
+  border: none;
+  padding: 0;
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 5px
+}
+
+.theme-toggle>svg {
+  inline-size: 100%;
+  block-size: 100%;
+  stroke-linecap: round
+}
+
+[data-theme=dark] .theme-toggle {
+  --icon-fill: hsl(210 14% 70%);
+  --icon-fill-hover: hsl(210 17% 90%)
+}
+
+@media (hover: none) {
+  .theme-toggle {
+    --size: 28px
+  }
+}
+
+html[data-theme=dark] {
+  color-scheme: dark
+}
+
+@supports not (color-scheme: dark) {
+  html[data-theme=dark] {
+    background: #111
+  }
+}

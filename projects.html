@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Projects</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="components/footer.js" type="text/javascript" defer></script>
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem('theme-preference') || 'light';
+  </script>
+</head>
+
+<body>
+  <header class="nav">
+    <span><a href="/index.html" id="time-header"></a></span>
+    <span class="right-aligned"><a href="/projects.html" class="ngc">Projects</a>&nbsp;
+      <button title="Toggles light &amp; dark" aria-label="light" aria-live="polite" class="theme-toggle"
+    id="theme-toggle"><svg viewBox="0 0 24 24" aria-hidden="true" class="sun-and-moon" height="22" width="22">
+      <mask class="moon" id="moon-mask">
+        <rect fill="white" height="100%" width="100%" x="0" y="0"></rect>
+        <circle cx="24" cy="10" fill="black" r="6"></circle>
+      </mask>
+      <circle class="sun" cx="12" cy="12" fill="currentColor" mask="url(#moon-mask)" r="6"></circle>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" x2="12" y1="1" y2="3"></line>
+        <line x1="12" x2="12" y1="21" y2="23"></line>
+        <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+        <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+        <line x1="1" x2="3" y1="12" y2="12"></line>
+        <line x1="21" x2="23" y1="12" y2="12"></line>
+        <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+        <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+      </g>
+    </svg></button>
+    </span>
+  </header>
+  <div class="invertedcursor"></div>
+
+  <div class="centered">
+    <div class="padding-content">
+      <div class="semibold-font">Corporate Projects</div>
+
+      <br>
+      <p>
+      <div>Service Principal<span class="right-aligned">Nov 21...</span></div>
+      </p>
+      <p class="lightnormal-font">Service Principal is an identity created for use with applications, hosted services,
+        and automated tools to access Azure resources. We provide a portal and dashboard for application team to
+        directly access service principal without having the deep knowledge of azure portal and even DBA team's
+        intervention which in turn helps both the team to save majority of the time</p>
+      <p>Tech Stack : Spring Boot, React JS, PostgresDB, Azure Portal, Akeyless</p>
+      <hr>
+      <br>
+
+      <p>
+      <div>Firepass<span class="right-aligned">June 21...</span></div>
+      </p>
+      <p class="lightnormal-font">It is a privileged access management (PAM) system for normal/ emergency time-bound
+        ad-hoc remote access to databases by operational users (privileged, application developers, non-service
+        accounts) to perform certain tasks. It is a mechanism of Authentication and Authorization of user to the
+        database securely and Generates and manages ephemeral database credentials based on Role-Based Ac- cess Controls
+        (RBAC)</p>
+      <p>Tech Stack : Ansible, Python, Hashicorp Vault, Javascript, Akeyless</p>
+      <hr>
+      <br>
+
+      <p>
+      <div>Migration Automation<span class="right-aligned">March 21 - Aug 21</span></div>
+      </p>
+      <p class="lightnormal-font">Migration Automation aka DMAAS (Database Migration As A Service) is a automation
+        framework around Attunity tool which offers sql to sql migration and related activities to users and thus
+        minimizing interaction between end user and migration team so that migration team can focus on prioritised
+        complex task and this we saved 1500+ working hours</p>
+      <p>Tech Stack : Ansible, Python, Attunity, HTML, Javascript</p>
+      <hr>
+      <br>
+
+      <div class="semibold-font">Personal Exploration</div>
+
+      <br>
+      <p>
+      <div>Hyperledger Supply Chain (BlockChain)</div>
+      </p>
+      <p class="lightnormal-font">The project was mainly focused on preventing counterfeiting of drugs by creating fully
+        functional supply chain by using blockchain technology with the help of hy- perledger</p>
+      <p>Tech Stack : Hyperledger Fabric, Node.js, GoLang</p>
+      <hr>
+      <br>
+
+      <p>
+      <div>Online Quize using DevOps methodology</div>
+      </p>
+      <p class="lightnormal-font">This project included creation of web-app in TypeScript and NodeJS and Google Firebase
+        to store the data. Main focus here is to apply the opensource DevOps tools</p>
+      <p>Tech Stack :Typescript, FireBase, Bootstrap, Git, Jenkins, Docker, Kibana</p>
+      <hr>
+      <br>
+
+      <p>
+      <div>SanFrancisco Crime Classification</div>
+      </p>
+      <p class="lightnormal-font">Trained the model using given dataset that includes Date, Category, DayOfWeek,
+        Latitude, Longitude etc, then predicted the category of crime that occurred, given the time and location only
+      </p>
+      <p>Tech Stack : Python, Jupyter, Numpy, Pandas, MatPlotLib</p>
+      <hr>
+      <br>
+
+    </div>
+
+    <footer-component></footer-component>
+  </div>
+  <script src="./actions.js"></script>
+</body>
+
+</html>

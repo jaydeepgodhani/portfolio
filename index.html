@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>JD's folio</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="components/footer.js" type="text/javascript" defer></script>
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem('theme-preference') || 'light';
+  </script>
+</head>
+
+<body>
+  <div class="invertedcursor"></div>
+  <header class="nav">
+    <span><a href="/index.html" id="time-header"></a></span>
+    <span class="right-aligned"><a href="/projects.html" class="ngc">Projects</a>&nbsp;
+      <button title="Toggles light &amp; dark" aria-label="light" aria-live="polite" class="theme-toggle"
+    id="theme-toggle"><svg viewBox="0 0 24 24" aria-hidden="true" class="sun-and-moon" height="22" width="22">
+      <mask class="moon" id="moon-mask">
+        <rect fill="white" height="100%" width="100%" x="0" y="0"></rect>
+        <circle cx="24" cy="10" fill="black" r="6"></circle>
+      </mask>
+      <circle class="sun" cx="12" cy="12" fill="currentColor" mask="url(#moon-mask)" r="6"></circle>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" x2="12" y1="1" y2="3"></line>
+        <line x1="12" x2="12" y1="21" y2="23"></line>
+        <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+        <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+        <line x1="1" x2="3" y1="12" y2="12"></line>
+        <line x1="21" x2="23" y1="12" y2="12"></line>
+        <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+        <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+      </g>
+    </svg></button>
+    </span>
+  </header>
+
+  <div class="centered">
+    <div class="padding-content">
+      <div class="bold-font">Hey, I'm jaydeep Godhani</div>
+      <p>I am a software engineer based in Bangalore. I am currently working at Walmart.</p>
+      <p>This website is my humble abode on the internet, where I pen my musings in here about software development,
+        specifically JavaScript, TypeScript and web technologies in general.</p>
+      <p>If you enjoy my content, consider subscribing to my RSS feed. If you feel so inclined, you're welcome to buy me
+        a coffee.</p>
+    </div>
+    <div class="padding-content">
+      <div class="semibold-font">Experience</div>
+      <p>Intern (6 months), SDE II (2 years), SDE III
+      <div class="lightnormal-font">Walmart<span class="right-aligned">Jan20-Present</span></div>
+      </p>
+      <p class="lightnormal-font">Worked as Full stack developer as well as Automation Engineer, got Bravo award for
+        exceptional contribution and multiple badges as well.</p>
+      <hr>
+      <br>
+
+      <p>Associate Software Engineer
+      <div class="lightnormal-font">Accenture (1 year)<span class="right-aligned">Oct15-oct16</span></div>
+      </p>
+      <p class="lightnormal-font">Worked as a Developer, this position involved Data Conversion, Report Generation and
+        Developing Interfaces in Oracle Applications</p>
+      <hr>
+      <br>
+    </div>
+
+    <footer-component></footer-component>
+  </div>
+  <script src="./actions.js"></script>
+</body>
+
+</html>
