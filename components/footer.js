@@ -6,8 +6,7 @@ footerTemplate.innerHTML = `
   <div class="semibold-font">Contact</div>
   <p>Feel free to reach me at <a class="ngc" href="mailto:jaydeepgodhani16@gmail.com">jaydeepgodhani16@gmail.com</a>
   </p>
-  <p>You can also find me on <a class="ngc" href="https://www.twitter.com/jaydeepgodhani">Twitter</a>, and <a
-      class="ngc" href="https://www.linkedin.com/jaydeepgodhani">LinkedIn</a></p>
+  <p>You can also find me on <a class="ngc" href="https://www.twitter.com/jaydeepgodhani">Twitter</a>, <a class="ngc" href="https://www.linkedin.com/jaydeepgodhani">LinkedIn</a>, and <a class="ngc" href="https://www.leetcode.com/jaydeepgodhani">LeetCode</a></p>
   </br>
   </br>
   </footer>

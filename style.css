@@ -27,8 +27,8 @@ button, :hover {
 }
 
 [data-theme="light"] {
-  --bg-color: #ffffff;
-  --font-primary-color: #000000;
+  --bg-color: #F1F0E8;
+  --font-primary-color: #0e2e3b;
   --font-secondary-color: #4a4545;
   --hr-dark: rgb(0, 0, 0, 0);
   --hr-light: rgba(0, 0, 0, 0.75);
@@ -91,6 +91,13 @@ button, :hover {
   margin: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.image-style {
+  margin-top: 15px;
+  transform: rotate(-2deg);
+  border: 9px solid white;
+  box-shadow: 10px 10px 12px gray;
 }
 
 body {
