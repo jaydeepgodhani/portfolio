@@ -23,3 +23,14 @@ document.body.onmousemove = function (e) {
   document.documentElement.style.setProperty('--x', e.clientX + 'px');
   document.documentElement.style.setProperty('--y', e.clientY + 'px');
 }
+
+const allLinks = document.getElementsByTagName("a");
+
+for (var i = 0; i < allLinks.length; ++i) {
+  allLinks[i].addEventListener("mouseover", () => {
+    document.getElementById("invertedcursor").style.transform = "scale(2)";
+});
+  allLinks[i].addEventListener("mouseout", () => {
+    document.getElementById("invertedcursor").style.transform = "scale(1)";
+  });
+}
